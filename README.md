@@ -1,11 +1,15 @@
 # CarND-18-Motion-Planning-PID-Control
 Udacity Self-Driving Car Engineer Nanodegree: PID Control.
 
+## Overview
+
+<img src="https://github.com/ChenBohan/CarND-17-Motion-Planning-PID-Control/blob/master/readme_img/overview.png" width = "50%" height = "50%" div align=center />
+
 ## P control
 
-The cross track error, cte is the current y position of the robot (our reference is a horizontal line) along the x-axis.
+The cross track error, `cte` is the current y position of the robot (our reference is a horizontal line) along the x-axis.
 
-To get the steering value we multiply the tau parameter with the cte.
+To get the steering value we multiply the `tau` parameter with the `cte`.
 
 ```python
 def run(robot, tau, n=100, speed=1.0):
