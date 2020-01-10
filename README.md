@@ -5,6 +5,10 @@ Udacity Self-Driving Car Engineer Nanodegree: PID Control.
 
 <img src="https://github.com/ChenBohan/CarND-17-Motion-Planning-PID-Control/blob/master/readme_img/overview.png" width = "100%" height = "100%" div align=center />
 
+- How do we generate input?
+
+- How do we drive error to zero over time?
+
 ## P control
 
 The cross track error, `cte` is the current y position of the robot (our reference is a horizontal line) along the x-axis.
