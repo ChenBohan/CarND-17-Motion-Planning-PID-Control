@@ -3,7 +3,7 @@ Udacity Self-Driving Car Engineer Nanodegree: PID Control.
 
 ## Overview
 
-<img src="https://github.com/ChenBohan/CarND-17-Motion-Planning-PID-Control/blob/master/readme_img/overview.png" width = "50%" height = "50%" div align=center />
+<img src="https://github.com/ChenBohan/CarND-17-Motion-Planning-PID-Control/blob/master/readme_img/overview.png" width = "100%" height = "100%" div align=center />
 
 ## P control
 
