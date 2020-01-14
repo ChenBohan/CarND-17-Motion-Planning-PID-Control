@@ -11,11 +11,16 @@ Udacity Self-Driving Car Engineer Nanodegree: PID Control.
 
 ## P control
 
-P control uses present infomation.
+- P = proportional
 
-The cross track error, `cte` is the current y position of the robot (our reference is a horizontal line) along the x-axis.
+- Using present infomation.
 
-To get the steering value we multiply the `tau` parameter with the `cte`.
+- `cte`: cross track error.
+
+- `tau`: response strength of the proportional controller.
+
+- Your steering angle, alpha, equals a proportional factor of `tau` to the cross track error. What will happen to the car?
+    - Car overshoots.
 
 ```python
 def run(robot, tau, n=100, speed=1.0):
@@ -36,7 +41,7 @@ Disadvantage of P-control: error won't go zero, just get smaller -> **steady sta
 
 ## PD control
 
-P control uses present + past infomation.
+- Using present + past infomation.
 
 We've added the `prev_cte` variable which is assigned to the previous CTE and `diff_cte`, the difference between the current CTE and previous CTE.
 
