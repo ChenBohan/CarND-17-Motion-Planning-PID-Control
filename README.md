@@ -22,6 +22,9 @@ Udacity Self-Driving Car Engineer Nanodegree: PID Control.
 - Your steering angle, alpha, equals a proportional factor of `tau` to the cross track error. What will happen to the car?
     - Car overshoots.
 
+- Tau, the control parameter, changes from 0.1 to 0.3. What happens?
+    - Oscillates faster.
+
 ```python
 def run(robot, tau, n=100, speed=1.0):
     x_trajectory = []
