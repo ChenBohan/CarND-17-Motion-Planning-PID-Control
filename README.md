@@ -21,6 +21,17 @@ Udacity Self-Driving Car Engineer Nanodegree: PID Control.
 
 - Your steering angle, alpha, equals a proportional factor of `tau` to the cross track error. What will happen to the car?
     - Car overshoots.
+ ```
+('y: ', 0.2823092286467954, ' steer: ', -0.03506168379843757)
+('y: ', 0.2124225375861215, ' steer: ', -0.028230922864679542)
+('y: ', 0.14130182577480355, ' steer: ', -0.02124225375861215)
+('y: ', 0.06965132942895698, ' steer: ', -0.014130182577480355)
+('y: ', -0.002703889136699514, ' steer: ', -0.006965132942895698)
+('y: ', -0.07540645276524681, ' steer: ', 0.00027038891366995137)
+('y: ', -0.14809553271809206, ' steer: ', 0.007540645276524681)
+('y: ', -0.22040856550422522, ' steer: ', 0.014809553271809207)
+('y: ', -0.2914332738077974, ' steer: ', 0.022040856550422525)
+```
 
 - Tau, the control parameter, changes from 0.1 to 0.3. What happens?
     - Oscillates faster.
