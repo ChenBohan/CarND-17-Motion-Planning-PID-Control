@@ -9,6 +9,11 @@ Udacity Self-Driving Car Engineer Nanodegree: PID Control.
 
 - How do we drive error to zero over time?
 
+- Reference
+
+    - [Understanding PID Control, Part 1: What is PID Control?](https://www.youtube.com/watch?v=wkfEZmsQqiA)
+    - 
+
 ## P control
 
 - P = proportional
@@ -56,13 +61,14 @@ def run(robot, tau, n=100, speed=1.0):
     
 ### Drone example
 
-pic
+
+<img src="https://github.com/ChenBohan/CarND-17-Motion-Planning-PID-Control/blob/master/readme_img/drone_p_control.png" width = "100%" height = "100%" div align=center />
 
 - Disadvantage of P-control: 
 
     - For drones, error won't go zero, just get smaller -> **steady state error**.
 
-## PD control
+## PI control
 
 - Using present + past infomation.
 
@@ -84,7 +90,25 @@ def run(robot, tau_p, tau_d, n=100, speed=1.0):
     return x_trajectory, y_trajectory
 ```
 
+### Drone example
+
+<img src="https://github.com/ChenBohan/CarND-17-Motion-Planning-PID-Control/blob/master/readme_img/drone_pi_control.png" width = "100%" height = "100%" div align=center />
+
+- steady state error
+    - if has steady state error -> the integral output will increase -> the drone will continue tio rise.
+
+- reach the desired altitude
+    - the proportial path is zero.
+    - the integral path has been summing and substract values until it came to rest at 100 rpm.
+    
+- disadvantage:
+    - overshooting.
+
 ## PID control
+
+- Using present + pass + future infomation.
+
+- The derivative term produces a measure of the rate of change the error that is how fast the error is growing or shrinking.
 
 With the integral term we're keeping track of all the previous CTEs, initially we set `int_cte` to 0 and then add the current `cte` term to the count `int_cte += cte`.
 
@@ -105,6 +129,10 @@ def run(robot, tau_p, tau_d, tau_i, n=100, speed=1.0):
         y_trajectory.append(robot.y)
     return x_trajectory, y_trajectory
 ```
+
+### Drone example
+
+<img src="https://github.com/ChenBohan/CarND-17-Motion-Planning-PID-Control/blob/master/readme_img/drone_pid_control.png" width = "100%" height = "100%" div align=center />
 
 ## Parameter optimization
 
