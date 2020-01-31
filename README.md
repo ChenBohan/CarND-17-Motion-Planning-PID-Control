@@ -19,8 +19,8 @@ Udacity Self-Driving Car Engineer Nanodegree: PID Control.
 
 - `tau`: response strength of the proportional controller.
 
-- Your steering angle, alpha, equals a proportional factor of `tau` to the cross track error. What will happen to the car?
-    - Car overshoots.
+Simulation result:
+
 ```
 ('y: ', 0.2823092286467954, ' steer: ', -0.03506168379843757)
 ('y: ', 0.2124225375861215, ' steer: ', -0.028230922864679542)
@@ -51,7 +51,11 @@ def run(robot, tau, n=100, speed=1.0):
 
 pic
 
-Disadvantage of P-control: error won't go zero, just get smaller -> **steady state error**.
+- Disadvantage of P-control: 
+
+    - For drones, error won't go zero, just get smaller -> **steady state error**.
+
+    - For cars -> overshoots.
 
 ## PD control
 
