@@ -24,8 +24,6 @@ Udacity Self-Driving Car Engineer Nanodegree: PID Control.
 
 - `tau`: response strength of the proportional controller.
 
-### Car example
-
 ```python
 def run(robot, tau, n=100, speed=1.0):
     x_trajectory = []
@@ -59,15 +57,6 @@ def run(robot, tau, n=100, speed=1.0):
 
     - Oscillates faster.
     
-### Drone example
-
-
-<img src="https://github.com/ChenBohan/CarND-17-Motion-Planning-PID-Control/blob/master/readme_img/drone_p_control.png" width = "100%" height = "100%" div align=center />
-
-- Disadvantage of P-control: 
-
-    - For drones, error won't go zero, just get smaller -> **steady state error**.
-
 ## PD control
 
 - Using present + past infomation.
@@ -89,20 +78,6 @@ def run(robot, tau_p, tau_d, n=100, speed=1.0):
         y_trajectory.append(robot.y)
     return x_trajectory, y_trajectory
 ```
-
-### Drone example
-
-<img src="https://github.com/ChenBohan/CarND-17-Motion-Planning-PID-Control/blob/master/readme_img/drone_pi_control.png" width = "100%" height = "100%" div align=center />
-
-- steady state error
-    - if has steady state error -> the integral output will increase -> the drone will continue tio rise.
-
-- reach the desired altitude
-    - the proportial path is zero.
-    - the integral path has been summing and substract values until it came to rest at 100 rpm.
-    
-- disadvantage:
-    - overshooting.
 
 ## PID control
 
@@ -129,10 +104,6 @@ def run(robot, tau_p, tau_d, tau_i, n=100, speed=1.0):
         y_trajectory.append(robot.y)
     return x_trajectory, y_trajectory
 ```
-
-### Drone example
-
-<img src="https://github.com/ChenBohan/CarND-17-Motion-Planning-PID-Control/blob/master/readme_img/drone_pid_control.png" width = "100%" height = "100%" div align=center />
 
 ## Parameter optimization
 
@@ -172,3 +143,26 @@ def twiddle(tol=0.2):
 Also, with twiddle the PID controller converges faster but we overshoot drastically at first so it's a tradeoff.
 
 <img src="https://github.com/ChenBohan/CarND-17-Motion-Planning-PID-Control/blob/master/readme_img/performance.png" width = "50%" height = "50%" div align=center />
+
+
+## Drone example
+
+<img src="https://github.com/ChenBohan/CarND-17-Motion-Planning-PID-Control/blob/master/readme_img/drone_p_control.png" width = "100%" height = "100%" div align=center />
+
+- Disadvantage of P-control: 
+
+    - For drones, error won't go zero, just get smaller -> **steady state error**.
+
+<img src="https://github.com/ChenBohan/CarND-17-Motion-Planning-PID-Control/blob/master/readme_img/drone_pi_control.png" width = "100%" height = "100%" div align=center />
+
+- steady state error
+    - if has steady state error -> the integral output will increase -> the drone will continue tio rise.
+
+- reach the desired altitude
+    - the proportial path is zero.
+    - the integral path has been summing and substract values until it came to rest at 100 rpm.
+    
+- disadvantage:
+    - overshooting.
+    
+<img src="https://github.com/ChenBohan/CarND-17-Motion-Planning-PID-Control/blob/master/readme_img/drone_pid_control.png" width = "100%" height = "100%" div align=center />
