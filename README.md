@@ -59,7 +59,7 @@ def run(robot, tau, n=100, speed=1.0):
     
 ## PD control
 
-- Using present + past infomation.
+- Using present + future infomation.
 
 We've added the `prev_cte` variable which is assigned to the previous CTE and `diff_cte`, the difference between the current CTE and previous CTE.
 
