@@ -68,7 +68,7 @@ def run(robot, tau, n=100, speed=1.0):
 
     - For drones, error won't go zero, just get smaller -> **steady state error**.
 
-## PI control
+## PD control
 
 - Using present + past infomation.
 
